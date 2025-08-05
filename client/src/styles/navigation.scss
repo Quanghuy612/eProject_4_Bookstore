@@ -1,0 +1,56 @@
+.nav-wrap {
+  background: #403042;
+}
+
+.nav-primary-wrap {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: right;
+
+}
+
+.nav-home, .nav-join, .nav-watchlist, .nav-profile {
+  color: rgba(255,255,255,0.8);
+  font-size: 12pt;
+
+  padding: 15px;
+
+  margin-left: 15px;
+
+  //border: 1px solid white;
+
+  text-decoration: none;
+
+  transition: color .3s;
+
+  &:hover {
+    color: white;
+
+    filter: brightness(0) invert(1);
+  }
+
+  &:active {
+    color: white;
+  }
+}
+
+.nav-profile {
+  &:hover {
+    filter: brightness(130%);
+  }
+}
+
+.nav-icon {
+  display: inline;
+  position: relative;
+  bottom: 2px;
+  width: 20px;
+  margin-right: 10px;
+
+
+  transition: all .3s;
+  filter: brightness(0) invert(0.9);
+}
