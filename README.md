@@ -1,81 +1,36 @@
-# Bookshop
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Bookshop site in React (redux) + NodeJS + Express + Oracle
+## Getting Started
 
-### Disclaimer!
+First, run the development server:
 
-The design of the page was taken from the https://www.bookdepository.com/. This project was created for only educational purposes. We do **NOT** intend to produce any commercial content from this!
-
-### Insights
-
-Home page
-
-<img src="./documentation/screenshots/Home.png">
-
-More: [documentation/screenshots](https://github.com/LeventeWolf/Bookshop/tree/master/documentation/screenshots)
-
-
-## Setup & Run
-
-### Prerequisites:
-Client & Server
-- NodeJS version: 16 (not supported: 17)
-- Web browser: Chrome, Mozilla firefox,
-
-Database
-- Docker
-- Oracle [db] version: oracle-12c
-
-<hr>
-
-### Installation
-
-#### React & Nodejs
-To install the dependencies go to /client & /server then run: <br>
-
-`npm install`
-
-#### Oracle
-
-Detailed installation: https://github.com/MaksymBilenko/docker-oracle-12c
-
-1. Download docker image:  <br>
-    ```
-    docker pull truevoly/oracle-12c
-    ```
-
-2. Download **oracle-client** [Version 19.14.0.0.0] <br>
-    https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html <br>
-    [Windows/MacOS]: Change `libPath` location in **server/src/dao/main_dao.js** to your downloaded oracle-client path <br>
-    [Linux]: download libaio1 && export oracle-client to path 
-    ```
-    sudo apt-get install libaio1
-    ```
-    ```
-    export LD_LIBRARY_PATH=/home/user/oracle/instantclient_19_14:$LD_LIBRARY_PATH
-    ``` 
-<hr>
-
-### Run
-
-#### Webserver
-
-/server -> `npm start`
-
-#### Client
-
-/client -> `npm start`
-
-#### Database
-
-##### Run docker image
-
-**[Windows]:** <br> 
-Start oracle-12c in your Docker desktop app
-
-**[Linux]:** 
-```
-docker run -p 8080:8080 -p 1521:1521 truevoly/oracle-12c
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-You can use SQLDeveloper for managing the database
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
